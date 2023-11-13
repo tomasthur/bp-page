@@ -10,11 +10,11 @@ const Calculator = ({
 }: any) => {
   return (
     <div className="bg-gray-100 flex flex-col justify-center items-center mt-8 pb-5">
-      <h1 className=" text-gray-800 my-4 text-4xl">Cenova kalkulacka</h1>
+      <h1 className=" text-gray-800 my-4 text-4xl">Cenová kalkulačka</h1>
       <div className=" flex flex-col justify-around items-center w-[90vw]">
         <div className="flex flex-col w-[70%]">
           <label htmlFor="place">
-            <b>Potrebujem navrhnut [m2]:</b>
+            <b>Potrebujem navrhnúť [m2]:</b>
           </label>
           <input
             type="number"
@@ -28,7 +28,7 @@ const Calculator = ({
         </div>
         <div className="flex flex-col w-[70%] mt-5">
           <label htmlFor="interesting">
-            <b>Mam zaujem o:</b>
+            <b>Mám záujem o:</b>
           </label>
           <select
             id="interesting"
@@ -52,12 +52,12 @@ const Calculator = ({
       {result > 0 && (
         <div className="flex flex-col items-center animate-fadeIn mt-4">
           <p>
-            Predpokladana suma daneho projektu / vizualizacie je{" "}
+            Predpokladaná suma daného projektu / vizualizácie je{" "}
             <b>{result} eur.</b>
           </p>
-          <p>Suma sa vsak moze lisit v zavislosti od viacerych okolnosti. </p>
+          <p>Suma sa vŠak môže líšiť v závislosti od viacerých okolností. </p>
           <p>
-            Pre ziskanie presnej sumy nas prosim{" "}
+            Pre získanie presnej sumy nás prosím{" "}
             <Link className="font-bold" href={"/contact"}>
               kontaktujte.
             </Link>
@@ -65,11 +65,11 @@ const Calculator = ({
         </div>
       )}
       <button
-        className="bg-gray-400 p-2 rounded-lg mt-4 hover:bg-gray-500 z-50"
+        className="bg-gray-400 p-2 cursor-pointer mt-4 hover:bg-gray-500 z-50"
         onClick={() => setResult(calculator.area * calculator.servicePrice)}
         disabled={calculator.area == 0 || calculator.servicePrice == 0}
       >
-        Vypocitaj!
+        Vypočítaj!
       </button>
     </div>
   );

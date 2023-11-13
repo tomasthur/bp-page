@@ -9,8 +9,8 @@ interface WaterMarkType {
 
 const Watermark = ({ text, opacity }: WaterMarkType) => {
   return (
-    <div className="hidden md:flex justify-start w-[30vw] pr-16">
-      <h1 className={`absolute top-12 opacity-${opacity} left-6 text-[18vw] font-extrabold m-auto text-gray-800 z-10`}>
+    <div className="hidden lg:flex justify-start w-[30vw] pr-16">
+      <h1 className={`absolute top-0 opacity-${opacity} left-6 text-[18vw] font-extrabold m-auto text-black z-10`}>
         {text}
       </h1>
       <Image

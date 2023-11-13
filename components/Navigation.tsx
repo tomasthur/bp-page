@@ -2,25 +2,27 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "../public/logo-bp-menu.png";
 import Image from "next/image";
 
 export default function Navigation() {
   const [navbar, setNavbar] = useState(false);
+  const currentRoute = usePathname();
   return (
     <div>
       <nav className="w-full fixed top-0 bg-gray-100 shadow z-50">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+        <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
           <div>
-            <div className="flex items-center justify-between py-3 md:py-2 md:block">
+            <div className="flex items-center justify-between py-3 lg:py-2 lg:block">
               <Link href={"/"} onClick={() => setNavbar(false)}>
                 <Image
                   src={Logo}
                   alt="logo"
-                  className=" w-36 md:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110"
+                  className=" w-36 lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110"
                 />
               </Link>
-              <div className="md:hidden">
+              <div className="lg:hidden">
                 <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar((p) => !p)}
@@ -60,33 +62,61 @@ export default function Navigation() {
           </div>
           <div>
             <div
-              className={`flex-1 justify-self-center relative md:block pb-0 ${
+              className={`flex-1 justify-self-center relative lg:block pb-0 ${
                 navbar ? "block animate-openMenu" : "hidden"
               }`}
             >
-              <ul className="flex flex-col items-center justify-center space-y-10 md:flex md:flex-row md:space-x-6 md:space-y-0 pb-3 md:pb-0">
-                <li className="text-gray-800 animate-fadeIn md:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
-                  <Link href={"/"} onClick={() => setNavbar(false)}>
+              <ul className="flex flex-col items-center justify-center space-y-10 lg:flex lg:flex-row lg:space-x-6 lg:space-y-0 pb-3 lg:pb-0">
+                <li className="text-gray-800 animate-fadeIn lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
+                  <Link
+                    className={`${currentRoute == "/" ? "text-gray-600" : ""}`}
+                    href={"/"}
+                    onClick={() => setNavbar(false)}
+                  >
                     DOMOV
                   </Link>
                 </li>
-                <li className="text-gray-800 animate-fadeIn md:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
-                  <Link href={"/portfolio"} onClick={() => setNavbar(false)}>
+                <li className="text-gray-800 animate-fadeIn lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
+                  <Link
+                    className={`${
+                      currentRoute == "/portfolio" ? "text-gray-600" : ""
+                    }`}
+                    href={"/portfolio"}
+                    onClick={() => setNavbar(false)}
+                  >
                     PORTFÓLIO
                   </Link>
                 </li>
-                <li className="text-gray-800 animate-fadeIn md:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
-                  <Link href={"/about"} onClick={() => setNavbar(false)}>
+                <li className="text-gray-800 animate-fadeIn lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
+                  <Link
+                    className={`${
+                      currentRoute == "/about" ? "text-gray-600" : ""
+                    }`}
+                    href={"/about"}
+                    onClick={() => setNavbar(false)}
+                  >
                     O NÁS
                   </Link>
                 </li>
-                <li className="text-gray-800 animate-fadeIn md:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
-                  <Link href={"/pricelist"} onClick={() => setNavbar(false)}>
+                <li className="text-gray-800 animate-fadeIn lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
+                  <Link
+                    className={`${
+                      currentRoute == "/pricelist" ? "text-gray-600" : ""
+                    }`}
+                    href={"/pricelist"}
+                    onClick={() => setNavbar(false)}
+                  >
                     CENNÍK
                   </Link>
                 </li>
-                <li className="text-gray-800 animate-fadeIn md:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
-                  <Link href={"/contact"} onClick={() => setNavbar(false)}>
+                <li className="text-gray-800 animate-fadeIn lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
+                  <Link
+                    className={`${
+                      currentRoute == "/contact" ? "text-gray-600" : ""
+                    }`}
+                    href={"/contact"}
+                    onClick={() => setNavbar(false)}
+                  >
                     KONTAKT
                   </Link>
                 </li>

@@ -1,83 +1,88 @@
 "use client";
 
 import Watermark from "@/components/Watermark";
-import React, { useState } from "react";
+import React from "react";
 import Card from "@/components/Card";
-import Interior from "../../public/interiery.jpg";
-import Exterior from "../../public/exteriery.jpg";
-import ArchitectonicStudies from "../../public/architektonicke_studie.png";
+import Interior from "../../public/interior2.png";
+import Exterior from "../../public/exterior1.jpg";
+import ArchitectonicStudies from "../../public/archStudy.jpg";
 import SmallConstruction from "../../public/drobne_stavby.jpg";
 import ProjectDocumentation from "../../public/projektova_dokumentacia.jpg";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
+
+import Logo from "../../public/logo-bp.png";
+import InteriorPage from "@/components/InteriorPage";
+import ProjectsPage from "@/components/ProjectsPage";
+import ArchitectonicStudyPage from "@/components/ArchitectonicStudyPage";
+import ExteriorPage from "@/components/ExteriorPage";
+import SmallConstructsPage from "@/components/SmallConstructsPage";
 
 const Portfolio = () => {
-  const [hover, setHover] = useState(false);
-  const router = useRouter();
-
   return (
     <div>
-      <Watermark text="Portfolio" opacity={90} />
+      <Watermark text="Portfólio" opacity={90} />
+      <h1 className="lg:hidden text-7xl font-extrabold text-gray-800 mt-20">
+        Portfólio
+      </h1>
+      <Image
+        src={Logo}
+        alt="logo"
+        className="lg:hidden fixed top-36 left-14 opacity-10"
+      />
 
-      <div className="flex w-[80vw] justify-between p-10 m-auto mt-80">
-        <Link href={"/portfolio#interiors"} scroll={true}>
-          <Card
-            image={Interior}
-            alt={"interier"}
-            heading="Interiery"
-            description="Lorem ipsum dolor sit amet bla bla bla..."
-          />
-        </Link>
-        <Link href={"/portfolio#projects"} scroll>
-          <Card
-            image={ProjectDocumentation}
-            alt={"projektova dokumentacia"}
-            heading="Projektova dokumentacia"
-            description="Lorem ipsum dolor sit amet bla bla bla..."
-          />
-        </Link>
-        <Link href={"/portfolio#architectonics"}>
-          <Card
-            image={ArchitectonicStudies}
-            alt={"architektonicke studie"}
-            heading="Architektonicke studie"
-            description="Lorem ipsum dolor sit amet bla bla bla..."
-          />
-        </Link>
+      <div className="mt-10 lg:mt-80 w-[100vw]">
+        <div className="w-[80%] flex flex-col lg:flex-row justify-around items-center m-auto">
+          <Link href={"/portfolio#interiors"}>
+            <Card
+              image={Interior}
+              alt={"interiér"}
+              heading="Interiér"
+              description="Lorem ipsum dolor sit amet bla bla bla..."
+            />
+          </Link>
+          <Link href={"/portfolio#projects"} className="mt-10 lg:mt-0">
+            <Card
+              image={ProjectDocumentation}
+              alt={"projektová dokumentácia"}
+              heading="Projektová dokumentácia"
+              description="Lorem ipsum dolor sit amet bla bla bla..."
+            />
+          </Link>
+          <Link href={"/portfolio#architectonics"} className="mt-10 lg:mt-0">
+            <Card
+              image={ArchitectonicStudies}
+              alt={"architektonická štúdia"}
+              heading="Architektonická štúdia"
+              description="Lorem ipsum dolor sit amet bla bla bla..."
+            />
+          </Link>
+        </div>
+        <div className="w-[80%] flex flex-col lg:flex-row justify-around items-center m-auto lg:mt-10">
+          <Link href={"/portfolio#exteriors"} className="mt-10 lg:mt-0">
+            <Card
+              image={Exterior}
+              alt={"exteriér"}
+              heading="Exteriér"
+              description="Lorem ipsum dolor sit amet bla bla bla..."
+            />
+          </Link>
+          <Link href={"/portfolio#smallConstructs"} className="mt-10 lg:mt-0">
+            <Card
+              image={SmallConstruction}
+              alt={"drobná stavba"}
+              heading="Drobná stavba"
+              description="Lorem ipsum dolor sit amet bla bla bla..."
+            />
+          </Link>
+        </div>
       </div>
-      <div className="flex w-[60vw] m-auto justify-around">
-        <Link href={"/portfolio#exteriors"}>
-          <Card
-            image={Exterior}
-            alt={"exterier"}
-            heading="Exteriery"
-            description="Lorem ipsum dolor sit amet bla bla bla..."
-          />
-        </Link>
-        <Link href={"/portfolio#smallConstructs"}>
-          <Card
-            image={SmallConstruction}
-            alt={"drobne stavby"}
-            heading="Drobne stavby"
-            description="Lorem ipsum dolor sit amet bla bla bla..."
-          />
-        </Link>
-      </div>
-      <section id="interiors" className="scroll-smooth">
-        <h1 className=" text-4xl h-[80vh] scroll-smooth ">Interiery</h1>
-      </section>
-      <section id="projects">
-        <h1 className=" text-4xl h-[80vh] mt-10">Projektova dokumentacia</h1>
-      </section>
-      <section id="architectonics">
-        <h1 className=" text-4xl h-[80vh]">Architektonicke studie</h1>
-      </section>
-      <section id="exteriors">
-        <h1 className=" text-4xl h-[80vh]">Exteriery</h1>
-      </section>
-      <section id="smallConstructs">
-        <h1 className=" text-4xl h-[80vh]">Drobne stavby</h1>
-      </section>
+
+      <InteriorPage />
+      <ProjectsPage />
+      <ArchitectonicStudyPage />
+      <ExteriorPage />
+      <SmallConstructsPage />
     </div>
   );
 };

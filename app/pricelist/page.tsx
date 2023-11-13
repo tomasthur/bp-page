@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Logo from "../../public/logo-bp.png";
-import Image from "next/image";
-import Link from "next/link";
 import Calculator from "./components/Calculator";
 import Watermark from "@/components/Watermark";
+import Image from "next/image";
+import Logo from "../../public/logo-bp.png";
 
 interface CalculatorType {
   area: number;
@@ -97,16 +96,24 @@ const PriceList = () => {
   return (
     <div className="animate-fadeIn">
       <Watermark text="Cenník" opacity={90} />
-      <div className="flex flex-col justify-center items-center mt-64">
+      <h1 className="lg:hidden text-7xl font-extrabold text-gray-800 mt-20">
+        Cenník
+      </h1>
+      <Image
+        src={Logo}
+        alt="logo"
+        className="lg:hidden fixed top-36 left-14 opacity-10"
+      />
+      <div className="flex flex-col justify-center items-center mt-6 lg:mt-72">
         <h3 className="font-bold text-xl">
-          Uvedene ceny su predbezne a su vylucne orientacne
+          Uvedené ceny sú predbežné a sú výlučne orientačné
         </h3>
         <table className="max-w-[90vw] overflow-hidden mt-8">
           <thead className="bg-gray-400">
             <tr>
-              <th>Druh sluzby</th>
+              <th>Druh služby</th>
               <th>Cena za m2</th>
-              <th>Poznamky</th>
+              <th>Poznámky</th>
               <th>Obsah</th>
             </tr>
           </thead>
@@ -122,8 +129,8 @@ const PriceList = () => {
                   <b>{item.serviceType}</b>
                 </td>
                 <td>{item.price}</td>
-                <td className="max-w-[50vw] md:max-w-[30vw]">{item.note}</td>
-                <td className="max-w-[50vw] md:max-w-[30vw] p-4">
+                <td className="max-w-[50vw] lg:max-w-[30vw]">{item.note}</td>
+                <td className="max-w-[50vw] lg:max-w-[30vw] p-4">
                   {item.content}
                 </td>
               </tr>
