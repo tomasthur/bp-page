@@ -9,7 +9,9 @@ const ArchitectonicStudyPage = () => {
 
   return (
     <section id="architectonics" className="pt-16">
-      <h1 className="text-3xl lg:text-4xl font-extrabold">Architektonická štúdia</h1>
+      <h1 className="text-3xl lg:text-4xl font-extrabold">
+        Architektonická štúdia
+      </h1>
       <div className="w-[90%] flex flex-col m-auto mt-4 lg:mt-8">
         <p className="text-xl text-gray-500 lg:text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
@@ -20,6 +22,7 @@ const ArchitectonicStudyPage = () => {
         <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center mt-4">
           {images.map((img: any) => (
             <Image
+              key={img}
               src={img}
               alt="architektonicka studia"
               className="z-20 w-[100%] lg:w-[30%] mb-4 lg:mb-0"
