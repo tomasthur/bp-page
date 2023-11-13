@@ -55,6 +55,7 @@ const ReactCarousel = ({ images }: any) => {
         transitionTime={2500}
         stopOnHover
         autoFocus
+        swipeable={true}
         showIndicators={false}
         showStatus={false}
         showArrows={false}
