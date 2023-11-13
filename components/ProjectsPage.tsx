@@ -6,7 +6,7 @@ import Image from "next/image";
 const ProjectsPage = () => {
   return (
     <section id="projects" className="pt-8 lg:pt-16">
-      <h1 className="text-3xl lg:text-4xl font-bold">
+      <h1 className="text-3xl lg:text-4xl font-extrabold">
         Projektová dokumentácia
       </h1>
       <div className="flex flex-col lg:flex-row justify-between items-center w-[90%] lg:w-[80%] m-auto">

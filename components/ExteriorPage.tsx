@@ -10,7 +10,7 @@ const ExteriorPage = () => {
     const images = [Ext1, Ext2, Ext3, Ext4];
   return (
     <section id="exteriors" className="pt-16">
-      <h1 className="text-3xl lg:text-4xl font-bold">Exteriér</h1>
+      <h1 className="text-3xl lg:text-4xl font-extrabold">Exteriér</h1>
 
       <p className="text-xl text-gray-500 text-center w-[900%] m-auto mt-8 lg:w-[80%]">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sint

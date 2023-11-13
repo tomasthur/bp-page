@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Watermark from "@/components/Watermark";
 
 import Logo from "../../public/logo-bp.png";
+import Instagram from "../../public/ig-logo.png";
 
 const Contact = () => {
   return (
@@ -25,19 +28,15 @@ const Contact = () => {
           <div className="mb-6 z-30">
             <p className="font-bold">Kontakt:</p>
             <p className="z-30">email: email@gmail.com</p>
-            <p className="z-30">telefonne cislo: 090x xxx xxx</p>
+            <p className="z-30">telefónne číslo: 090x xxx xxx</p>
           </div>
-          <div className="flex">
-            <button className="font-bold me-5 cursor-pointer z-30 lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
-              Instagram
-            </button>
-            <button className="font-bold me-5 cursor-pointer z-30 lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
-              Facebook
-            </button>
-            <button className="font-bold cursor-pointer z-30 lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110">
-              LinkedIn
-            </button>
-          </div>
+          <p className="font-bold text-lg">Sledujte nás:</p>
+          <Image
+            src={Instagram}
+            alt="instagram-logo"
+            className="w-[5%] lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer"
+            onClick={() => window.open("https://www.instagram.com/bejocka/")}
+          />
         </div>
         <div className="flex flex-col w-[100%] lg:w-[45%]">
           <div className="flex flex-col">
@@ -45,7 +44,7 @@ const Contact = () => {
             <input
               type="text"
               id="fullName"
-              className="border-b-2 bg-transparent"
+              className="border-b-2 bg-transparent z-30"
             />
           </div>
           <div className="flex flex-col">
@@ -53,12 +52,12 @@ const Contact = () => {
             <input
               type="email"
               id="email"
-              className="border-b-2 bg-transparent"
+              className="border-b-2 bg-transparent z-30"
             />
           </div>
           <div className="flex flex-col w-[100%]">
             <label htmlFor="message">Správa</label>
-            <textarea id="message" className="border-b-2 bg-transparent" />
+            <textarea id="message" className="border-b-2 bg-transparent z-30" />
           </div>
           <div className="flex w-[85%] mt-8">
             <button className="bg-black text-white p-3 rounded-full transition duration-300 ease-in-out transform hover:scale-110">

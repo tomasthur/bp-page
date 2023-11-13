@@ -9,7 +9,7 @@ const ArchitectonicStudyPage = () => {
 
   return (
     <section id="architectonics" className="pt-16">
-      <h1 className="text-3xl lg:text-4xl font-bold">Architektonická štúdia</h1>
+      <h1 className="text-3xl lg:text-4xl font-extrabold">Architektonická štúdia</h1>
       <div className="w-[90%] flex flex-col m-auto mt-4 lg:mt-8">
         <p className="text-xl text-gray-500 lg:text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus

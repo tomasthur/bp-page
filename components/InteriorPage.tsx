@@ -43,7 +43,7 @@ const InteriorPage = () => {
   ];
   return (
     <section id="interiors" className="scroll-smooth pt-16 flex flex-col">
-      <h1 className="text-3xl lg:text-4xl font-bold">Interiér</h1>
+      <h1 className="text-3xl lg:text-4xl font-extrabold">Interiér</h1>
       <Carousel
         infiniteLoop
         autoFocus
