@@ -20,7 +20,7 @@ import SmallConstructsPage from "@/components/SmallConstructsPage";
 
 const Portfolio = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Watermark text="Portfólio" opacity={90} />
       <h1 className="lg:hidden text-7xl font-extrabold text-gray-800 mt-20">
         Portfólio
