@@ -21,7 +21,7 @@ const Card = ({image, alt, heading, description, onClick}: CardType) => {
     >
       <Image src={image} alt={alt} />
       <div
-        className={`absolute bottom-[0px] lg:bottom-[-220px] bg-gray-200 opacity-60 transition-all ${
+        className={`absolute w-[100%] p-2 bottom-[0px] lg:bottom-[-220px] bg-gray-200 opacity-60 transition-all ${
           hover ? "lg:bottom-[0px]" : ""
         }`}
       >

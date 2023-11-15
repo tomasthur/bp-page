@@ -4,7 +4,7 @@ import SmallConstruction from "../public/drobne_stavby.jpg";
 
 const SmallConstructsPage = () => {
   return (
-    <section id="smallConstructs">
+    <section id="smallConstructs" className="pt-16">
       <h1 className="text-3xl lg:text-4xl font-extrabold">Drobné stavby</h1>
       <div className="flex flex-col lg:flex-row justify-between m-auto items-center w-[90%]">
         <div className="w-[90%] lg:w-[45%]">

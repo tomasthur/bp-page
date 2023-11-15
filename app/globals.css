@@ -3,32 +3,32 @@
 @tailwind utilities;
 
 .offcanvas {
-    position: fixed;
-    top: 0;
-    right: -300px; /* Off-canvas width */
-    width: 300px; /* Off-canvas width */
-    height: 100%;
-    background-color: black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: right 0.3s ease;
-    z-index: 40;
-  }
-  
-  .offcanvas.open {
-    right: 0;
-  }
-  
-  .offcanvas-inner {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .menu-content {
-    padding: 1rem;
-  }
+  position: fixed;
+  top: 0;
+  right: -300px; /* Off-canvas width */
+  width: 300px; /* Off-canvas width */
+  height: 100%;
+  background-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  z-index: 40;
+}
 
-  /* styles/globals.css or your global CSS file */
+.offcanvas.open {
+  right: 0;
+}
+
+.offcanvas-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu-content {
+  padding: 1rem;
+}
+
+/* styles/globals.css or your global CSS file */
 
 .flip-card {
   background-color: transparent;
@@ -66,17 +66,3 @@
 .flip-card-back {
   transform: rotateY(180deg);
 }
-
-@media screen and (max-width: 992px) {
-  .flip-card {
-    background-color: transparent;
-    width: 90vw;
-    height: 100vh;
-    perspective: 500px;
-  }
-}
-
-
-  
-  
-  

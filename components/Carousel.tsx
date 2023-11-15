@@ -50,12 +50,12 @@ const ReactCarousel = ({ images }: any) => {
     <>
       <Carousel
         autoPlay
+        showThumbs={false}
         interval={6000}
         infiniteLoop
         transitionTime={2500}
         stopOnHover
         autoFocus
-        swipeable={true}
         showIndicators={false}
         showStatus={false}
         showArrows={false}

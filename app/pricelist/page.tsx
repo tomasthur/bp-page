@@ -104,7 +104,7 @@ const PriceList = () => {
         alt="logo"
         className="lg:hidden fixed top-36 left-14 opacity-10"
       />
-      <div className="flex flex-col justify-center items-center mt-6 lg:mt-72">
+      <div className="flex flex-col justify-center items-center mt-6 lg:mt-72 xl:mt-80">
         <h3 className="font-bold text-xl">
           Uvedené ceny sú predbežné a sú výlučne orientačné
         </h3>

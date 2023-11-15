@@ -10,8 +10,8 @@ interface FlipCardType {
 
 const FlipCard = ({ image, name, description, alt }: FlipCardType) => {
   return (
-    <div className="w-[100%] h-96 lg:w-[50%] m-auto mb-4 lg:mb-">
-      <div className="flip-card">
+    <div className="w-[100%] h-96 lg:w-[50%] m-auto mb-4">
+      <div className="flip-card m-auto">
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <h3 className="text-xl font-bold text-gray-800 mb-2 z-20">

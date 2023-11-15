@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Mulish } from "next/font/google";
+import { Roboto_Condensed } from "next/font/google";
 import Navigation from "@/components/Navigation";
 
-const font = Mulish({ subsets: ["latin"] });
+const font = Roboto_Condensed({ subsets: ["latin"], weight: '400' });
 
 export const metadata: Metadata = {
   title: "PB HOUSE",

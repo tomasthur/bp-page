@@ -3,7 +3,7 @@
 import Watermark from "@/components/Watermark";
 import React from "react";
 import Card from "@/components/Card";
-import Interior from "../../public/interior2.png";
+import Interior from "../../public/interior2.jpg";
 import Exterior from "../../public/exterior1.jpg";
 import ArchitectonicStudies from "../../public/archStudy.jpg";
 import SmallConstruction from "../../public/drobne_stavby.jpg";
@@ -20,7 +20,7 @@ import SmallConstructsPage from "@/components/SmallConstructsPage";
 
 const Portfolio = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden animate-fadeIn">
       <Watermark text="Portfólio" opacity={90} />
       <h1 className="lg:hidden text-7xl font-extrabold text-gray-800 mt-20">
         Portfólio

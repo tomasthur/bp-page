@@ -13,17 +13,22 @@ const OfCanvas = () => {
     <>
       <div className={`offcanvas ${isOpen ? "open" : ""}`}>
         <div className="offcanvas-inner">
-          <div className="flex flex-col h-[100%] justify-center items-start ps-10">
-            <p className="text-white font-bold text-lg">Adresa:</p>
-            <p className="text-white">Ulica XX, 05561, Jaklovce</p>
-            <p className="text-white font-bold text-lg mt-4">Kontakt:</p>
-            <p className="text-white">email: email@gmail.com</p>
-            <p className="text-white">telefónne číslo: 090x xxx xxx</p>
+          <div className="flex flex-col h-[100%] justify-center items-start ps-4">
+            <p className="text-white font-bold text-lg mt-4">
+              Ing.arch. Patrícia Humeňanská
+            </p>
+            <p className="text-white">email: humenanska.pb@gmail.com</p>
+            <p className="text-white">telefónne číslo: +421 907 375 902</p>
+            <p className="text-white font-bold text-lg mt-4">
+              Bc. Beáta Šimková
+            </p>
+            <p className="text-white">email: simkova.pb@gmail.com</p>
+            <p className="text-white">telefónne číslo: +421 903 838 666</p>
             <p className="text-white font-bold text-lg mt-4">Sledujte nás:</p>
             <Image
               src={Instagram}
               alt="instagram-logo"
-              className="w-[10%] mt-4 cursor-pointer lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110"
+              className="w-[30px] mt-4 cursor-pointer lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110"
               onClick={() => window.open("https://www.instagram.com/bejocka/")}
             />
           </div>

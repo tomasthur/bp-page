@@ -12,7 +12,7 @@ const ExteriorPage = () => {
     <section id="exteriors" className="pt-16">
       <h1 className="text-3xl lg:text-4xl font-extrabold">Exteriér</h1>
 
-      <p className="text-xl text-gray-500 text-center w-[900%] m-auto mt-8 lg:w-[80%]">
+      <p className="text-xl text-gray-500 text-center w-[90%] m-auto mt-8 lg:w-[80%]">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sint
         perspiciatis itaque provident placeat, veniam esse atque inventore
         adipisci distinctio ratione excepturi quis amet non iusto voluptatum,
@@ -21,9 +21,10 @@ const ExteriorPage = () => {
 
       <Carousel
         infiniteLoop
+        showThumbs={false}
         autoFocus
         showIndicators={true}
-        showStatus={true}
+        showStatus={false}
         showArrows={true}
         className="w-[100%] lg:w-[80%] m-auto mt-6"
         swipeable={true}

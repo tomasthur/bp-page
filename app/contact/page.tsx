@@ -9,7 +9,7 @@ import Instagram from "../../public/ig-logo.png";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="animate-fadeIn">
       <Watermark text={"Kontakt"} opacity={100} />
       <h1 className="lg:hidden text-7xl font-extrabold text-gray-800 mt-20">
         Kontakt
@@ -19,22 +19,23 @@ const Contact = () => {
         alt="logo"
         className="lg:hidden fixed top-36 left-14 opacity-10"
       />
-      <div className="w-[90%] m-auto mt-10 lg:mt-80 flex flex-col lg:flex-row justify-between items-start">
+      <div className="w-[90%] lg:w-[100%] m-auto lg:px-10 lg:absolute lg:bottom-10 flex flex-col lg:flex-row justify-between items-start">
         <div className="flex flex-col w-[100%] lg:w-[45%] lg:border-r-2 border-black mb-6 lg:mb-0">
           <div className="mb-6 z-30">
-            <p className="font-bold">Adresa:</p>
-            <p className="z-30">Ulica XX, 05561, Jaklovce</p>
+            <p className="font-bold">Ing.arch. Patrícia Keruľová</p>
+            <p className="z-30">email: humenanska.pb@gmail.com</p>
+            <p className="z-30">telefónne číslo: +421 907 375 902</p>
           </div>
           <div className="mb-6 z-30">
-            <p className="font-bold">Kontakt:</p>
-            <p className="z-30">email: email@gmail.com</p>
-            <p className="z-30">telefónne číslo: 090x xxx xxx</p>
+            <p className="font-bold">Bc. Beáta Šimková</p>
+            <p className="z-30">email: simkova.pb@gmail.com</p>
+            <p className="z-30">telefónne číslo: +421 903 838 666</p>
           </div>
           <p className="font-bold text-lg">Sledujte nás:</p>
           <Image
             src={Instagram}
             alt="instagram-logo"
-            className="w-[5%] lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer"
+            className="w-[20px] md:w-[30px] mt-2 lg:hover:text-gray-600 transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer"
             onClick={() => window.open("https://www.instagram.com/bejocka/")}
           />
         </div>
