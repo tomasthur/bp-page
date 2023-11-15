@@ -10,7 +10,10 @@ import Instagram from "../../public/ig-logo.png";
 const Contact = () => {
   return (
     <div className="animate-fadeIn">
-      <Watermark text={"Kontakt"} opacity={100} />
+      <Watermark />
+      <h1 className={`hidden lg:block text-[18vw] font-extrabold m-auto text-black z-10`}>
+        Kontakt
+      </h1>
       <h1 className="lg:hidden text-7xl font-extrabold text-gray-800 mt-20">
         Kontakt
       </h1>
@@ -19,7 +22,7 @@ const Contact = () => {
         alt="logo"
         className="lg:hidden fixed top-36 left-14 opacity-10"
       />
-      <div className="w-[90%] lg:w-[100%] m-auto lg:px-10 lg:absolute lg:bottom-10 flex flex-col lg:flex-row justify-between items-start">
+      <div className="w-[90%] lg:w-[100%] h-[80%] m-auto lg:px-10 flex flex-col lg:flex-row justify-between items-start">
         <div className="flex flex-col w-[100%] lg:w-[45%] lg:border-r-2 border-black mb-6 lg:mb-0">
           <div className="mb-6 z-30">
             <p className="font-bold">Ing.arch. Patrícia Keruľová</p>

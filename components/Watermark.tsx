@@ -7,12 +7,12 @@ interface WaterMarkType {
   opacity: number;
 }
 
-const Watermark = ({ text, opacity }: WaterMarkType) => {
+const Watermark = () => {
   return (
     <div className="hidden lg:flex justify-start w-[30vw] pr-16">
-      <h1 className={`absolute top-0 opacity-${opacity} left-6 text-[18vw] font-extrabold m-auto text-black z-10`}>
+      {/* <h1 className={`absolute top-0 opacity-${opacity} left-6 text-[18vw] font-extrabold m-auto text-black z-10`}>
         {text}
-      </h1>
+      </h1> */}
       <Image
         src={Logo}
         alt="logo"

@@ -21,7 +21,10 @@ import SmallConstructsPage from "@/components/SmallConstructsPage";
 const Portfolio = () => {
   return (
     <div className="overflow-hidden animate-fadeIn">
-      <Watermark text="Portfólio" opacity={90} />
+      <Watermark />
+      <h1 className={`hidden lg:block text-[18vw] font-extrabold m-auto text-black z-10`}>
+        Portfólio
+      </h1>
       <h1 className="lg:hidden text-7xl font-extrabold text-gray-800 mt-20">
         Portfólio
       </h1>
@@ -31,7 +34,7 @@ const Portfolio = () => {
         className="lg:hidden fixed top-36 left-14 opacity-10"
       />
 
-      <div className="mt-10 lg:mt-80 w-[100vw]">
+      <div className="mt-10 lg:mt-4 w-[100vw]">
         <div className="w-[80%] flex flex-col lg:flex-row justify-around items-center m-auto">
           <Link href={"/portfolio#interiors"}>
             <Card

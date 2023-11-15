@@ -6,13 +6,18 @@ import Image from "next/image";
 import Watermark from "@/components/Watermark";
 import FlipCard from "@/components/FlipCard";
 import Bejka from "../../public/simkova_beata.jpg";
-import Patka from '../../public/humenanska_patricia.jpg';
+import Patka from "../../public/humenanska_patricia.jpg";
 
 const About = () => {
   return (
     <>
       <div className="flex justify-around items-center mt-20 animate-fadeIn">
-        <Watermark text="O nás" opacity={90} />
+        <Watermark />
+        <h1
+          className={`hidden lg:block absolute left-8 top-4 text-[18vw] font-extrabold m-auto text-black z-10`}
+        >
+          O nás
+        </h1>
         <div className="w-[100vw] p-3 lg:p-0 lg:w-[50vw] flex flex-col z-10">
           <h1 className="lg:hidden text-7xl font-extrabold text-gray-800 mb-7">
             O nás
@@ -36,7 +41,7 @@ const About = () => {
           </p>
           <div className="w-[100%] flex flex-col lg:flex-row justify-between items-center m-auto mt-4 lg:mt-10">
             <FlipCard
-            image={Patka}
+              image={Patka}
               name="Ing.arch. Patrícia Keruľová"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi esse quas sunt facere explicabo, atque repudiandae ea optio odit vero amet similique, vel consequatur rem modi ab magnam distinctio? Atque."
               alt="Patricia Humenanska"

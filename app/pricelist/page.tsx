@@ -95,7 +95,12 @@ const PriceList = () => {
 
   return (
     <div className="animate-fadeIn">
-      <Watermark text="Cenník" opacity={90} />
+      <Watermark />
+      <h1
+        className={`hidden lg:block text-[18vw] font-extrabold m-auto text-black z-10`}
+      >
+        Cenník
+      </h1>
       <h1 className="lg:hidden text-7xl font-extrabold text-gray-800 mt-20">
         Cenník
       </h1>
@@ -104,11 +109,11 @@ const PriceList = () => {
         alt="logo"
         className="lg:hidden fixed top-36 left-14 opacity-10"
       />
-      <div className="flex flex-col justify-center items-center mt-6 lg:mt-72 xl:mt-80">
+      <div className="flex flex-col justify-center items-center mt-6">
         <h3 className="font-bold text-xl">
           Uvedené ceny sú predbežné a sú výlučne orientačné
         </h3>
-        <table className="max-w-[90vw] overflow-hidden mt-8">
+        <table className="w-[90vw] overflow-hidden mt-8">
           <thead className="bg-gray-400">
             <tr>
               <th>Druh služby</th>
